@@ -160,6 +160,17 @@ app/
 │   │   └── page.tsx  # 貸款計算器
 │   └── ...           # 其他計算器
 ├── components/       # 可重複使用元件
+│   ├── layout/       # 布局元件
+│   │   ├── Header.tsx    # 頂部導航欄
+│   │   └── Footer.tsx    # 頁尾
+│   ├── sections/     # 頁面區域元件
+│   │   ├── HeroSection.tsx    # 首頁橫幅
+│   │   ├── PopularTools.tsx   # 熱門工具
+│   │   ├── Categories.tsx     # 分類瀏覽
+│   │   └── Features.tsx       # 功能特色
+│   └── cards/        # 卡片元件
+│       ├── ToolCard.tsx       # 工具卡片
+│       └── CategoryCard.tsx   # 分類卡片
 ├── lib/              # 工具函式和輔助程式
 ├── types/            # TypeScript 型別定義
 └── metadata/         # SEO 相關設定和模板
@@ -177,6 +188,9 @@ hooks/                # React Hooks
 docs/                 # 專案文件與規劃
 ├── ROADMAP.md        # 產品路線圖 (24個月規劃)
 └── ...               # 其他技術文件
+design-system/        # UI/UX 設計系統
+└── calculatify/
+    └── MASTER.md     # 設計規範總覽
 public/               # 靜態資源
 ```
 
