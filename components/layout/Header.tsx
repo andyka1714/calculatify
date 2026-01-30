@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import {
-  Calculator,
   Menu,
   X,
   Search,
@@ -69,8 +69,15 @@ export function Header() {
           href="/"
           className="flex items-center gap-2 transition-opacity duration-200 hover:opacity-80"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600 transition-transform duration-200 hover:scale-105">
-            <Calculator className="h-6 w-6 text-white" />
+          <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-lg transition-transform duration-200 hover:scale-105">
+            <Image
+              src="/Logo.png"
+              alt="Calculatify Logo"
+              width={40}
+              height={40}
+              className="h-full w-full object-contain"
+              priority
+            />
           </div>
           <span className="text-xl font-bold text-slate-900 dark:text-white">
             Calculatify

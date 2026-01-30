@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Calculator } from "lucide-react";
+import Image from "next/image";
 
 /**
  * Footer 元件 - 簡化版頁尾
@@ -64,8 +64,15 @@ export function Footer() {
             {/* Logo & Description */}
             <div className="lg:col-span-1">
               <Link href="/" className="flex items-center gap-2">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                  <Calculator className="h-6 w-6 text-white" />
+                <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-lg">
+                  <Image
+                    src="/Logo.png"
+                    alt="Calculatify Logo"
+                    width={40}
+                    height={40}
+                    className="h-full w-full object-contain"
+                    priority
+                  />
                 </div>
                 <span className="text-xl font-bold text-slate-900 dark:text-white">
                   Calculatify
