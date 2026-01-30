@@ -92,13 +92,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-white font-sans antialiased transition-colors duration-300 dark:bg-slate-900`}
       >
         {children}
-        <Toaster 
+        <Toaster
           position="bottom-right"
           toastOptions={{
             style: {
-              background: '#4F46E5',
-              color: '#FFFFFF',
-              border: '1px solid #4338CA',
+              background: "#4F46E5",
+              color: "#FFFFFF",
+              border: "1px solid #4338CA",
             },
           }}
         />

@@ -14,26 +14,26 @@ import {
 import { Button } from "@/components/ui/button";
 
 /**
- * Header 元件 - 網站頂部導航欄
- * Content-First 設計：學習中心優先，工具次要
+ * Header Component - Website Top Navigation Bar
+ * Content-First Design: Learning Center First, Tools Secondary
  */
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // 導航項目 - 內容優先架構
+  // Navigation Items - Content-First Architecture
   const learnItems = [
     {
-      label: "百分比計算指南",
+      label: "Percentage Calculation Guide",
       href: "/guides/percentage-calculation",
       status: "live",
     },
     {
-      label: "日期計算教學",
+      label: "Date Calculation Guide",
       href: "/guides/date-calculation",
       status: "coming-soon",
     },
     {
-      label: "年齡計算方法",
+      label: "Age Calculation Guide",
       href: "/guides/age-calculation",
       status: "coming-soon",
     },
@@ -41,26 +41,30 @@ export function Header() {
 
   const toolItems = [
     {
-      label: "百分比計算機",
+      label: "Percentage Calculator",
       href: "/tools/percentage-calculator",
       status: "live",
     },
-    { label: "日期計算機", href: "/tools/date-calculator", status: "live" },
     {
-      label: "年齡計算機",
+      label: "Date Calculator",
+      href: "/tools/date-calculator",
+      status: "live",
+    },
+    {
+      label: "Age Calculator",
       href: "/tools/age-calculator",
       status: "coming-soon",
     },
   ];
 
-  // 過濾可用的項目
+  // Filter visible items
   const visibleLearnItems = learnItems.filter((item) => item.status === "live");
   const visibleToolItems = toolItems.filter((item) => item.status === "live");
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/95 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/95">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* Logo 區域 */}
+        {/* Logo Area */}
         <Link
           href="/"
           className="flex items-center gap-2 transition-opacity duration-200 hover:opacity-80"
@@ -73,9 +77,9 @@ export function Header() {
           </span>
         </Link>
 
-        {/* 桌面版導航 */}
+        {/* Desktop Navigation */}
         <nav className="hidden items-center gap-1 lg:flex">
-          {/* 學習中心 - 最重要 */}
+          {/* Learning Center - Most Important */}
           <div className="group relative">
             <button className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-slate-600 transition-colors duration-200 hover:bg-slate-100 hover:text-indigo-600 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-indigo-400">
               <BookOpen className="h-4 w-4" />
@@ -99,7 +103,7 @@ export function Header() {
             )}
           </div>
 
-          {/* 工具 - 次要 */}
+          {/* Tools - Secondary */}
           <div className="group relative">
             <button className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-slate-600 transition-colors duration-200 hover:bg-slate-100 hover:text-indigo-600 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-indigo-400">
               <Wrench className="h-4 w-4" />
@@ -131,7 +135,7 @@ export function Header() {
             )}
           </div>
 
-          {/* 關於 */}
+          {/* About */}
           <Link
             href="/about"
             className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-slate-600 transition-colors duration-200 hover:bg-slate-100 hover:text-indigo-600 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-indigo-400"
@@ -141,9 +145,9 @@ export function Header() {
           </Link>
         </nav>
 
-        {/* 搜尋與行動按鈕 */}
+        {/* Search & Action Buttons */}
         <div className="flex items-center gap-2">
-          {/* 搜尋圖示（桌面版） */}
+          {/* Search Icon (Desktop) */}
           <Button
             variant="ghost"
             size="icon"
@@ -152,7 +156,7 @@ export function Header() {
             <Search className="h-5 w-5" />
           </Button>
 
-          {/* 聯絡我們按鈕 */}
+          {/* Contact Button */}
           <Button
             variant="ghost"
             size="sm"
@@ -162,7 +166,7 @@ export function Header() {
             <Link href="/contact">Contact</Link>
           </Button>
 
-          {/* 行動裝置選單按鈕 */}
+          {/* Mobile Menu Button */}
           <Button
             variant="ghost"
             size="icon"
@@ -178,11 +182,11 @@ export function Header() {
         </div>
       </div>
 
-      {/* 行動裝置選單 */}
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="border-t border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900 lg:hidden">
           <nav className="flex flex-col p-4">
-            {/* 學習中心 - 行動版 */}
+            {/* Learning Center - Mobile */}
             <div className="mb-4">
               <div className="mb-2 flex items-center gap-2 px-4 py-2 text-sm font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
                 <BookOpen className="h-4 w-4" />
@@ -200,7 +204,7 @@ export function Header() {
               ))}
             </div>
 
-            {/* 工具 - 行動版 */}
+            {/* Tools - Mobile */}
             <div className="mb-4">
               <div className="mb-2 flex items-center gap-2 px-4 py-2 text-sm font-semibold uppercase tracking-wider text-slate-400">
                 <Wrench className="h-4 w-4" />
@@ -218,7 +222,7 @@ export function Header() {
               ))}
             </div>
 
-            {/* 其他連結 */}
+            {/* Other Links */}
             <Link
               href="/about"
               className="flex items-center gap-2 rounded-md px-4 py-3 text-base text-slate-600 transition-colors duration-200 hover:bg-slate-100 hover:text-indigo-600 dark:text-slate-300 dark:hover:bg-slate-800"
