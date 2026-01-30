@@ -42,9 +42,46 @@ npx eslint --fix .        # 自動修復語法問題
 
 # 型別檢查
 npx tsc --noEmit
+
+# 格式化檢查
+npx prettier --check .    # 檢查所有檔案
+npx prettier --write .    # 自動格式化所有檔案
 ```
 
 **注意**: 目前未設定測試框架。建議新增 Jest、Vitest 或 Playwright 進行測試。
+
+## 提交前驗證規範（重要！）
+
+**每次新增功能或提交程式碼前，必須執行以下驗證：**
+
+```bash
+# 1. ESLint 語法檢查
+npm run lint
+
+# 2. TypeScript 型別檢查
+npx tsc --noEmit
+
+# 3. Prettier 格式化檢查
+npx prettier --check .
+```
+
+**驗證流程要求：**
+
+- **所有檢查必須通過**才能提交
+- 若有 ESLint 錯誤，使用 `npx eslint --fix .` 嘗試自動修復
+- 若有 Prettier 格式問題，使用 `npx prettier --write .` 自動格式化
+- 若 TypeScript 有錯誤，必須手動修正型別問題
+- **嚴禁提交帶有錯誤或警告的程式碼**
+
+**本地建置測試（推薦）：**
+
+在推送到 Vercel 前，建議先本地執行建置驗證：
+
+```bash
+npm run build
+```
+
+確保本地建置成功，再推送到遠端。
 
 ## 程式碼風格規範
 
