@@ -163,6 +163,9 @@ app/
 ├── lib/              # 工具函式和輔助程式
 ├── types/            # TypeScript 型別定義
 └── metadata/         # SEO 相關設定和模板
+docs/                 # 專案文件與規劃
+├── ROADMAP.md        # 產品路線圖 (24個月規劃)
+└── ...               # 其他技術文件
 public/               # 靜態資源
 ```
 
