@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Calculator, ArrowLeft, Home, Construction } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -12,7 +14,9 @@ export default function NotFound() {
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
               <Calculator className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-slate-900">Calculatify</span>
+            <span className="text-xl font-bold text-slate-900">
+              Calculatify
+            </span>
           </Link>
         </div>
       </header>
@@ -36,8 +40,8 @@ export default function NotFound() {
           </h2>
 
           <p className="mb-8 text-lg text-slate-600">
-            We are working hard to bring you more helpful calculators and guides. 
-            This page will be available soon!
+            We are working hard to bring you more helpful calculators and
+            guides. This page will be available soon!
           </p>
 
           {/* Suggestions */}
@@ -46,59 +50,70 @@ export default function NotFound() {
               While you wait, check out:
             </h3>
             <div className="grid gap-4 sm:grid-cols-2">
-              <Link 
+              <Link
                 href="/guides/percentage-calculation"
                 className="rounded-lg border border-slate-200 p-4 text-left transition-colors hover:border-indigo-300 hover:bg-indigo-50"
               >
                 <div className="mb-2 text-2xl">📊</div>
-                <div className="font-semibold text-slate-900">Percentage Guide</div>
-                <div className="text-sm text-slate-600">Learn percentage calculations</div>
+                <div className="font-semibold text-slate-900">
+                  Percentage Guide
+                </div>
+                <div className="text-sm text-slate-600">
+                  Learn percentage calculations
+                </div>
               </Link>
-              
-              <Link 
+
+              <Link
                 href="/tools/percentage-calculator"
                 className="rounded-lg border border-slate-200 p-4 text-left transition-colors hover:border-indigo-300 hover:bg-indigo-50"
               >
                 <div className="mb-2 text-2xl">🔢</div>
-                <div className="font-semibold text-slate-900">Percentage Calculator</div>
-                <div className="text-sm text-slate-600">Calculate percentages instantly</div>
+                <div className="font-semibold text-slate-900">
+                  Percentage Calculator
+                </div>
+                <div className="text-sm text-slate-600">
+                  Calculate percentages instantly
+                </div>
               </Link>
-              
-              <Link 
+
+              <Link
                 href="/tools/date-calculator"
                 className="rounded-lg border border-slate-200 p-4 text-left transition-colors hover:border-indigo-300 hover:bg-indigo-50"
               >
                 <div className="mb-2 text-2xl">📅</div>
-                <div className="font-semibold text-slate-900">Date Calculator</div>
-                <div className="text-sm text-slate-600">Calculate date differences</div>
+                <div className="font-semibold text-slate-900">
+                  Date Calculator
+                </div>
+                <div className="text-sm text-slate-600">
+                  Calculate date differences
+                </div>
               </Link>
-              
-              <Link 
+
+              <Link
                 href="/about"
                 className="rounded-lg border border-slate-200 p-4 text-left transition-colors hover:border-indigo-300 hover:bg-indigo-50"
               >
                 <div className="mb-2 text-2xl">ℹ️</div>
                 <div className="font-semibold text-slate-900">About Us</div>
-                <div className="text-sm text-slate-600">Learn about Calculatify</div>
+                <div className="text-sm text-slate-600">
+                  Learn about Calculatify
+                </div>
               </Link>
             </div>
           </div>
 
           {/* Back Button */}
           <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               className="border-slate-300"
               onClick={() => window.history.back()}
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
               Go Back
             </Button>
-            
-            <Button 
-              className="bg-indigo-600 hover:bg-indigo-700"
-              asChild
-            >
+
+            <Button className="bg-indigo-600 hover:bg-indigo-700" asChild>
               <Link href="/">
                 <Home className="mr-2 h-4 w-4" />
                 Back to Home
