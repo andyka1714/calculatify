@@ -1,172 +1,194 @@
 import Link from "next/link";
-import { Calculator, Github, Twitter, Mail } from "lucide-react";
+import { Calculator } from "lucide-react";
 
 /**
- * Footer 元件 - 網站底部區域
- * 包含版權資訊、連結和社交媒體圖示
+ * Footer 元件 - 簡化版頁尾
+ * 符合 Content-First 設計，強調教育資源定位
  */
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = {
-    tools: [
-      { label: "數學計算器", href: "/calculators/math" },
-      { label: "時間計算器", href: "/calculators/time" },
-      { label: "財務計算器", href: "/calculators/finance" },
-      { label: "健康計算器", href: "/calculators/health" },
-      { label: "實用工具", href: "/calculators/utility" },
-    ],
-    company: [
-      { label: "關於我們", href: "/about" },
-      { label: "聯絡我們", href: "/contact" },
-      { label: "隱私政策", href: "/privacy" },
-      { label: "使用條款", href: "/terms" },
-    ],
-    resources: [
-      { label: "使用說明", href: "/help" },
-      { label: "常見問題", href: "/faq" },
-      { label: "API 文件", href: "/api-docs" },
-      { label: "部落格", href: "/blog" },
-    ],
-  };
-
-  const socialLinks = [
-    {
-      label: "GitHub",
-      href: "https://github.com/calculatify",
-      icon: Github,
-    },
-    {
-      label: "Twitter",
-      href: "https://twitter.com/calculatify",
-      icon: Twitter,
-    },
-    {
-      label: "Email",
-      href: "mailto:hello@calculatify.com",
-      icon: Mail,
-    },
-  ];
-
   return (
-    <footer className="w-full border-t border-[#A5F3FC] bg-white transition-colors duration-300 dark:border-[#155E75] dark:bg-[#164E63]">
-      <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
-        {/* 主要內容區域 */}
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
-          {/* Logo 與描述區域 */}
-          <div className="lg:col-span-2">
-            <Link
-              href="/"
-              className="flex items-center gap-2 transition-opacity duration-200 hover:opacity-80"
-            >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#0891B2]">
-                <Calculator className="h-6 w-6 text-white" />
+    <footer className="w-full border-t border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900">
+      {/* Trust Section */}
+      <div className="border-b border-slate-100 bg-slate-50/50 px-4 py-12 dark:border-slate-800 dark:bg-slate-800/50 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-8 text-center sm:grid-cols-3">
+            <div>
+              <div className="mb-3 flex justify-center">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/30">
+                  <span className="text-2xl">⚡</span>
+                </div>
               </div>
-              <span className="text-xl font-bold text-[#164E63] dark:text-[#ECFEFF]">
-                Calculatify
-              </span>
-            </Link>
-            <p className="mt-4 max-w-xs text-sm text-[#0E7490] dark:text-[#A5F3FC]">
-              提供各種實用的免費線上計算器工具，讓您的計算更精確、更快速、更簡單。
-            </p>
+              <h3 className="mb-2 font-semibold text-slate-900 dark:text-white">
+                Instant & Accurate
+              </h3>
+              <p className="text-sm text-slate-600 dark:text-slate-400">
+                Get precise results in milliseconds
+              </p>
+            </div>
+            <div>
+              <div className="mb-3 flex justify-center">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/30">
+                  <span className="text-2xl">📚</span>
+                </div>
+              </div>
+              <h3 className="mb-2 font-semibold text-slate-900 dark:text-white">
+                Educational First
+              </h3>
+              <p className="text-sm text-slate-600 dark:text-slate-400">
+                Learn the math behind every calculation
+              </p>
+            </div>
+            <div>
+              <div className="mb-3 flex justify-center">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/30">
+                  <span className="text-2xl">🔒</span>
+                </div>
+              </div>
+              <h3 className="mb-2 font-semibold text-slate-900 dark:text-white">
+                Privacy Focused
+              </h3>
+              <p className="text-sm text-slate-600 dark:text-slate-400">
+                No data storage, completely private
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            {/* 社交媒體連結 */}
-            <div className="mt-6 flex items-center gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[#CFFAFE] text-[#0891B2] transition-all duration-200 hover:bg-[#0891B2] hover:text-white dark:bg-[#155E75] dark:text-[#22D3EE] dark:hover:bg-[#22D3EE] dark:hover:text-[#164E63]"
-                  aria-label={social.label}
-                >
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
+      {/* Main Footer */}
+      <div className="px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {/* Logo & Description */}
+            <div className="lg:col-span-1">
+              <Link href="/" className="flex items-center gap-2">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                  <Calculator className="h-6 w-6 text-white" />
+                </div>
+                <span className="text-xl font-bold text-slate-900 dark:text-white">
+                  Calculatify
+                </span>
+              </Link>
+              <p className="mt-4 text-sm text-slate-600 dark:text-slate-400">
+                Educational resources and accurate calculators for everyday
+                math.
+              </p>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-900 dark:text-white">
+                Learn
+              </h4>
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <Link
+                    href="/guides/percentage-calculation"
+                    className="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
+                  >
+                    Percentage Guide
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/guides/date-calculation"
+                    className="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
+                  >
+                    Date Calculation
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/guides"
+                    className="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
+                  >
+                    All Guides
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Tools */}
+            <div>
+              <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-900 dark:text-white">
+                Tools
+              </h4>
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <Link
+                    href="/tools/percentage-calculator"
+                    className="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
+                  >
+                    Percentage Calc
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/tools/date-calculator"
+                    className="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
+                  >
+                    Date Calc
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/tools"
+                    className="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
+                  >
+                    All Tools
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Legal */}
+            <div>
+              <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-900 dark:text-white">
+                Company
+              </h4>
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <Link
+                    href="/about"
+                    className="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
+                  >
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact"
+                    className="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
+                  >
+                    Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/privacy"
+                    className="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/terms"
+                    className="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
+                  >
+                    Terms of Service
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
 
-          {/* 工具連結 */}
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#164E63] dark:text-[#ECFEFF]">
-              計算器工具
-            </h3>
-            <ul className="mt-4 space-y-3">
-              {footerLinks.tools.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-[#0E7490] transition-colors duration-200 hover:text-[#0891B2] dark:text-[#A5F3FC] dark:hover:text-[#22D3EE]"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* 公司連結 */}
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#164E63] dark:text-[#ECFEFF]">
-              關於
-            </h3>
-            <ul className="mt-4 space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-[#0E7490] transition-colors duration-200 hover:text-[#0891B2] dark:text-[#A5F3FC] dark:hover:text-[#22D3EE]"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* 資源連結 */}
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#164E63] dark:text-[#ECFEFF]">
-              資源
-            </h3>
-            <ul className="mt-4 space-y-3">
-              {footerLinks.resources.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-[#0E7490] transition-colors duration-200 hover:text-[#0891B2] dark:text-[#A5F3FC] dark:hover:text-[#22D3EE]"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* 版權區域 */}
-        <div className="mt-12 border-t border-[#A5F3FC] pt-8 dark:border-[#155E75]">
-          <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-            <p className="text-sm text-[#0E7490] dark:text-[#A5F3FC]">
-              © {currentYear} Calculatify. 保留所有權利。
-            </p>
-            <p className="text-sm text-[#0E7490] dark:text-[#A5F3FC]">
-              使用本網站即表示您同意我們的{" "}
-              <Link
-                href="/terms"
-                className="text-[#0891B2] underline transition-colors duration-200 hover:text-[#164E63] dark:text-[#22D3EE] dark:hover:text-[#ECFEFF]"
-              >
-                使用條款
-              </Link>{" "}
-              和{" "}
-              <Link
-                href="/privacy"
-                className="text-[#0891B2] underline transition-colors duration-200 hover:text-[#164E63] dark:text-[#22D3EE] dark:hover:text-[#ECFEFF]"
-              >
-                隱私政策
-              </Link>
-              。
+          {/* Copyright */}
+          <div className="mt-12 border-t border-slate-100 pt-8 dark:border-slate-800">
+            <p className="text-center text-sm text-slate-500 dark:text-slate-400">
+              © {currentYear} Calculatify. Educational resources for everyone.
             </p>
           </div>
         </div>
