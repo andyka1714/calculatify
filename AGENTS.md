@@ -163,6 +163,17 @@ app/
 ├── lib/              # 工具函式和輔助程式
 ├── types/            # TypeScript 型別定義
 └── metadata/         # SEO 相關設定和模板
+components/ui/        # Shadcn UI 元件庫 (50+ 元件)
+├── button.tsx
+├── card.tsx
+├── input.tsx
+├── select.tsx
+├── sonner.tsx        # Toast 通知元件
+├── tabs.tsx
+└── ...               # 其他 Shadcn 元件
+hooks/                # React Hooks
+├── use-mobile.ts     # 行動裝置偵測
+└── ...               # 其他自定義 Hooks
 docs/                 # 專案文件與規劃
 ├── ROADMAP.md        # 產品路線圖 (24個月規劃)
 └── ...               # 其他技術文件
