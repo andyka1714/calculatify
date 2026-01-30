@@ -15,20 +15,22 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Calculatify - 免費線上計算器工具",
+    default: "Calculatify - Free Online Calculators & Math Guides",
     template: "%s | Calculatify",
   },
   description:
-    "Calculatify 提供各種實用的免費線上計算器，包括數學計算、時間計算、財務計算等。精確、快速、易用，支援手機與桌面裝置。",
+    "Calculatify provides free online calculators and educational guides for everyday math. Learn percentage calculations, date math, age calculation and more. Accurate, fast, and easy to use.",
   keywords: [
-    "計算器",
-    "線上計算",
-    "免費計算器",
-    "數學計算",
-    "BMI計算",
-    "貸款計算",
-    "百分比計算",
-    "日期計算",
+    "calculator",
+    "online calculator",
+    "free calculator",
+    "percentage calculator",
+    "date calculator",
+    "age calculator",
+    "math guide",
+    "calculation tutorial",
+    "BMI calculator",
+    "tip calculator",
   ],
   authors: [{ name: "Calculatify" }],
   creator: "Calculatify",
@@ -46,26 +48,26 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "zh_TW",
+    locale: "en_US",
     url: "https://calculatify.com",
     siteName: "Calculatify",
-    title: "Calculatify - 免費線上計算器工具",
+    title: "Calculatify - Free Online Calculators & Math Guides",
     description:
-      "提供各種實用的免費線上計算器，精確、快速、易用。",
+      "Free online calculators and educational guides for everyday math. Learn the math behind the numbers.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Calculatify - 免費線上計算器工具",
+        alt: "Calculatify - Free Online Calculators & Math Guides",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Calculatify - 免費線上計算器工具",
+    title: "Calculatify - Free Online Calculators & Math Guides",
     description:
-      "提供各種實用的免費線上計算器，精確、快速、易用。",
+      "Free online calculators and educational guides for everyday math.",
     images: ["/og-image.png"],
   },
   alternates: {
@@ -85,18 +87,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-TW" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-[#ECFEFF] font-sans antialiased transition-colors duration-300 dark:bg-[#0C4A6E]`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-white font-sans antialiased transition-colors duration-300 dark:bg-slate-900`}
       >
         {children}
         <Toaster 
           position="bottom-right"
           toastOptions={{
             style: {
-              background: '#164E63',
-              color: '#ECFEFF',
-              border: '1px solid #0891B2',
+              background: '#4F46E5',
+              color: '#FFFFFF',
+              border: '1px solid #4338CA',
             },
           }}
         />

@@ -5,28 +5,28 @@ import { FeaturedGuides } from "@/components/sections/FeaturedGuides";
 import { EssentialTools } from "@/components/sections/EssentialTools";
 
 /**
- * 首頁元件
- * Content-First Architecture：70% 內容 / 30% 工具
+ * Home Page Component
+ * Content-First Architecture: 70% Content / 30% Tools
  */
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
-      {/* 頂部導航 */}
+      {/* Header Navigation */}
       <Header />
 
-      {/* 主要內容區域 */}
+      {/* Main Content Area */}
       <main className="flex-1">
-        {/* Hero 區塊 - 15% 版面 */}
+        {/* Hero Section - 15% Layout */}
         <HeroSection />
 
-        {/* 精選指南 - 45% 版面（核心區塊） */}
+        {/* Featured Guides - 45% Layout (Core Section) */}
         <FeaturedGuides />
 
-        {/* 工具展示 - 25% 版面 */}
+        {/* Tools Showcase - 25% Layout */}
         <EssentialTools />
       </main>
 
-      {/* 頁尾 */}
+      {/* Footer */}
       <Footer />
     </div>
   );
