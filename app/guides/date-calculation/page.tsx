@@ -69,7 +69,7 @@ export default function DateCalculationGuidePage() {
     title: "How to Calculate Dates and Time Differences Like a Pro",
     description:
       "Master date calculations with our comprehensive guide. Learn how to calculate days between dates, understand leap years, handle time zones, and solve real-world date problems.",
-    url: "https://calculatify.com/guides/date-calculation-guide",
+    url: "https://calculatify.com/guides/date-calculation",
     datePublished: "2026-02-01",
     dateModified: "2026-02-01",
   });

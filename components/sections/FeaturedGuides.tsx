@@ -25,7 +25,7 @@ export function FeaturedGuides() {
         "From Unix timestamps to leap years, discover the science behind date calculations. Perfect for project planning and scheduling.",
       href: "/guides/date-calculation",
       category: "Time",
-      readTime: "8 min read",
+      readTime: "12 min read",
     },
     {
       icon: "🎂",

@@ -24,7 +24,7 @@ const guides = [
     title: "How to Calculate Dates and Time Differences Like a Pro",
     description:
       "Master date calculations with our comprehensive guide. Learn how to calculate days between dates, understand leap years, handle time zones, and solve real-world date problems.",
-    href: "/guides/date-calculation-guide",
+    href: "/guides/date-calculation",
     icon: Calendar,
     readTime: "12 min read",
     category: "Date & Time",

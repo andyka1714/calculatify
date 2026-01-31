@@ -30,7 +30,7 @@ export function Header() {
     },
     {
       label: "Date Calculation Guide",
-      href: "/guides/date-calculation-guide",
+      href: "/guides/date-calculation",
       status: "live",
     },
     {
