@@ -29,8 +29,8 @@ export function Header() {
     },
     {
       label: "Date Calculation Guide",
-      href: "/guides/date-calculation",
-      status: "coming-soon",
+      href: "/guides/date-calculation-guide",
+      status: "live",
     },
     {
       label: "Age Calculation Guide",
@@ -106,6 +106,14 @@ export function Header() {
                     {item.label}
                   </Link>
                 ))}
+                <div className="mt-2 border-t border-slate-100 px-3 py-2 dark:border-slate-700">
+                  <Link
+                    href="/guides"
+                    className="text-xs font-medium text-indigo-600 hover:text-indigo-700 dark:text-indigo-400"
+                  >
+                    View All Guides →
+                  </Link>
+                </div>
               </div>
             )}
           </div>
@@ -209,6 +217,13 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
+              <Link
+                href="/guides"
+                className="block rounded-md px-4 py-3 text-base font-medium text-indigo-600 transition-colors duration-200 hover:bg-slate-100 dark:text-indigo-400 dark:hover:bg-slate-800"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                View All Guides →
+              </Link>
             </div>
 
             {/* Tools - Mobile */}
