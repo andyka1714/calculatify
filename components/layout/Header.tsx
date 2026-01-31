@@ -10,6 +10,7 @@ import {
   BookOpen,
   Wrench,
   Info,
+  Newspaper,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -60,6 +61,22 @@ export function Header() {
   // Filter visible items
   const visibleLearnItems = learnItems.filter((item) => item.status === "live");
   const visibleToolItems = toolItems.filter((item) => item.status === "live");
+
+  // Blog items
+  const blogItems = [
+    {
+      label: "5 Everyday Uses for Percentage Calculators",
+      href: "/blog/everyday-uses-percentage",
+    },
+    {
+      label: "How to Calculate Tips Without a Calculator",
+      href: "/blog/calculate-tips-mentally",
+    },
+    {
+      label: "Understanding Sales Tax: A Beginner's Guide",
+      href: "/blog/sales-tax-guide",
+    },
+  ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/95 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/95">
@@ -150,6 +167,36 @@ export function Header() {
             )}
           </div>
 
+          {/* Blog */}
+          <div className="group relative">
+            <button className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-slate-600 transition-colors duration-200 hover:bg-slate-100 hover:text-indigo-600 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-indigo-400">
+              <Newspaper className="h-4 w-4" />
+              Blog
+            </button>
+            <div className="absolute left-0 top-full z-50 hidden w-56 rounded-lg border border-slate-200 bg-white p-2 shadow-lg group-hover:block dark:border-slate-700 dark:bg-slate-800">
+              <div className="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
+                Latest Posts
+              </div>
+              {blogItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="block rounded-md px-3 py-2 text-sm text-slate-600 transition-colors duration-200 hover:bg-slate-100 hover:text-indigo-600 dark:text-slate-300 dark:hover:bg-slate-700"
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <div className="mt-2 border-t border-slate-100 px-3 py-2 dark:border-slate-700">
+                <Link
+                  href="/blog"
+                  className="text-xs font-medium text-indigo-600 hover:text-indigo-700 dark:text-indigo-400"
+                >
+                  View All Posts →
+                </Link>
+              </div>
+            </div>
+          </div>
+
           {/* About */}
           <Link
             href="/about"
@@ -218,21 +265,21 @@ export function Header() {
                 </Link>
               ))}
               <Link
-                href="/guides"
+                href="/tools"
                 className="block rounded-md px-4 py-3 text-base font-medium text-indigo-600 transition-colors duration-200 hover:bg-slate-100 dark:text-indigo-400 dark:hover:bg-slate-800"
                 onClick={() => setIsMenuOpen(false)}
               >
-                View All Guides →
+                View All Tools →
               </Link>
             </div>
 
-            {/* Tools - Mobile */}
+            {/* Blog - Mobile */}
             <div className="mb-4">
               <div className="mb-2 flex items-center gap-2 px-4 py-2 text-sm font-semibold uppercase tracking-wider text-slate-400">
-                <Wrench className="h-4 w-4" />
-                Calculators
+                <Newspaper className="h-4 w-4" />
+                Blog
               </div>
-              {visibleToolItems.map((item) => (
+              {blogItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -242,6 +289,13 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
+              <Link
+                href="/blog"
+                className="block rounded-md px-4 py-3 text-base font-medium text-indigo-600 transition-colors duration-200 hover:bg-slate-100 dark:text-indigo-400 dark:hover:bg-slate-800"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                View All Posts →
+              </Link>
             </div>
 
             {/* Other Links */}
