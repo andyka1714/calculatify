@@ -23,8 +23,8 @@ export function FeaturedGuides() {
       title: "Understanding Date Math",
       description:
         "From Unix timestamps to leap years, discover the science behind date calculations. Perfect for project planning and scheduling.",
-      href: "/guides/math/date-calculation",
-      category: "Math",
+      href: "/guides/time/date-calculation",
+      category: "Date & Time",
       readTime: "12 min read",
     },
     {

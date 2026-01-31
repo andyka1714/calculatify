@@ -30,7 +30,7 @@ export function Header() {
     },
     {
       label: "Date Calculation Guide",
-      href: "/guides/math/date-calculation",
+      href: "/guides/time/date-calculation",
       status: "live",
     },
     {
@@ -48,7 +48,7 @@ export function Header() {
     },
     {
       label: "Date Calculator",
-      href: "/tools/math/date-calculator",
+      href: "/tools/time/date-calculator",
       status: "live",
     },
     {

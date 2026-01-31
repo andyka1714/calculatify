@@ -8,12 +8,13 @@ import {
   Calculator,
   TrendingUp,
   Heart,
+  Clock,
 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "All Guides | Calculatify Learning Center",
   description:
-    "Browse our comprehensive collection of math, finance, and health guides. Learn practical calculations with step-by-step tutorials.",
+    "Browse our comprehensive collection of math, time, finance, and health guides. Learn practical calculations with step-by-step tutorials.",
   keywords: ["learning guides", "math tutorials", "calculation guides", "educational resources"],
 };
 
@@ -21,12 +22,22 @@ const categories = [
   {
     title: "Math",
     description:
-      "Master everyday math with our comprehensive guides. From percentage calculations to date arithmetic.",
+      "Master everyday math with our comprehensive guides. Percentages, fractions, and basic arithmetic.",
     href: "/guides/math",
     icon: Calculator,
-    count: 2,
+    count: 1,
     color: "bg-indigo-100",
     iconColor: "text-indigo-600",
+  },
+  {
+    title: "Date & Time",
+    description:
+      "Master date and time calculations. Date differences, time zones, scheduling, and planning.",
+    href: "/guides/time",
+    icon: Clock,
+    count: 1,
+    color: "bg-blue-100",
+    iconColor: "text-blue-600",
   },
   {
     title: "Finance",
@@ -78,7 +89,7 @@ export default function AllGuidesPage() {
         {/* Categories Grid */}
         <section className="px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {categories.map((category) => (
                 <Link
                   key={category.title}

@@ -77,7 +77,7 @@ export default function NotFound() {
               </Link>
 
               <Link
-                href="/tools/math/date-calculator"
+                href="/tools/time/date-calculator"
                 className="rounded-lg border border-slate-200 p-4 text-left transition-colors hover:border-indigo-300 hover:bg-indigo-50"
               >
                 <div className="mb-2 text-2xl">📅</div>

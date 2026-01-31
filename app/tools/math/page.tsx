@@ -6,7 +6,6 @@ import {
   Wrench,
   ArrowRight,
   Calculator,
-  Calendar,
   CheckCircle,
   Sparkles,
 } from "lucide-react";
@@ -14,8 +13,8 @@ import {
 export const metadata: Metadata = {
   title: "Math Calculators | Free Online Tools | Calculatify",
   description:
-    "Free online math calculators for everyday calculations. Percentage calculator, date calculator, and more. Accurate, easy to use, with step-by-step explanations.",
-  keywords: ["math calculators", "percentage calculator", "date calculator", "free calculator", "online math tools"],
+    "Free online math calculators for everyday calculations. Percentage calculator and more. Accurate, easy to use, with step-by-step explanations.",
+  keywords: ["math calculators", "percentage calculator", "free calculator", "online math tools"],
 };
 
 const tools = [
@@ -27,13 +26,13 @@ const tools = [
     icon: Calculator,
     features: ["Discount calculations", "Tax computations", "Grade conversions"],
   },
+];
+
+const relatedCategories = [
   {
-    title: "Date Calculator",
-    description:
-      "Calculate the difference between two dates. Find days, weeks, months, and working days between any dates with leap year support.",
-    href: "/tools/math/date-calculator",
-    icon: Calendar,
-    features: ["Day counting", "Working days only", "Leap year support"],
+    title: "Date & Time",
+    description: "Calculate date differences, time zones, and scheduling.",
+    href: "/tools/time",
   },
 ];
 
@@ -122,8 +121,33 @@ export default function MathToolsPage() {
           </div>
         </section>
 
+        {/* Related Categories */}
+        <section className="border-t border-slate-200 bg-slate-50 px-4 py-12 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl">
+            <h3 className="mb-6 text-center text-lg font-semibold text-slate-900">
+              Related Categories
+            </h3>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {relatedCategories.map((category) => (
+                <Link
+                  key={category.title}
+                  href={category.href}
+                  className="rounded-lg border border-slate-200 bg-white p-4 transition-all hover:shadow-md"
+                >
+                  <h4 className="mb-1 font-semibold text-slate-900">
+                    {category.title}
+                  </h4>
+                  <p className="text-sm text-slate-600">
+                    {category.description}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Related Guides CTA */}
-        <section className="border-t border-slate-200 bg-slate-50 px-4 py-16 sm:px-6 lg:px-8">
+        <section className="border-t border-slate-200 bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-4 text-2xl font-bold text-slate-900">
               Learn the Math Behind the Calculations

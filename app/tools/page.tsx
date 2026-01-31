@@ -8,6 +8,7 @@ import {
   Calculator,
   TrendingUp,
   Heart,
+  Clock,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -21,12 +22,22 @@ const categories = [
   {
     title: "Math",
     description:
-      "Free calculators for everyday math problems. Percentages, dates, and more.",
+      "Free calculators for everyday math problems. Percentages and more.",
     href: "/tools/math",
     icon: Calculator,
-    count: 2,
+    count: 1,
     color: "bg-indigo-100",
     iconColor: "text-indigo-600",
+  },
+  {
+    title: "Time",
+    description:
+      "Date and age calculators for planning and scheduling needs.",
+    href: "/tools/time",
+    icon: Clock,
+    count: 1,
+    color: "bg-blue-100",
+    iconColor: "text-blue-600",
   },
   {
     title: "Finance",
@@ -78,7 +89,7 @@ export default function AllToolsPage() {
         {/* Categories Grid */}
         <section className="px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {categories.map((category) => (
                 <Link
                   key={category.title}

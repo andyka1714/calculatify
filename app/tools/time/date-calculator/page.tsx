@@ -423,7 +423,7 @@ export default function DateCalculatorPage() {
                   className="border-indigo-300 bg-white text-indigo-700 hover:bg-indigo-50"
                   asChild
                 >
-                  <Link href="/guides/math/date-calculation">
+                  <Link href="/guides/time/date-calculation">
                     Read Full Guide
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>

@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import Link from "next/link";
-import { BookOpen, ArrowRight, Clock, Calendar, Calculator, Sparkles } from "lucide-react";
+import { BookOpen, ArrowRight, Clock, Calculator, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Math Guides | Everyday Math Tutorials | Calculatify",
   description:
-    "Master everyday math with our comprehensive guides. Learn percentage calculations, date math, and more with step-by-step tutorials and real-world examples.",
-  keywords: ["math guides", "percentage tutorial", "date calculation guide", "learn math", "math tutorials"],
+    "Master everyday math with our comprehensive guides. Learn percentage calculations and more with step-by-step tutorials and real-world examples.",
+  keywords: ["math guides", "percentage tutorial", "learn math", "math tutorials"],
 };
 
 const guides = [
@@ -21,14 +21,13 @@ const guides = [
     readTime: "10 min read",
     category: "Math Fundamentals",
   },
+];
+
+const relatedCategories = [
   {
-    title: "How to Calculate Dates and Time Differences Like a Pro",
-    description:
-      "Master date calculations with our comprehensive guide. Learn how to calculate days between dates, understand leap years, handle time zones, and solve real-world date problems.",
-    href: "/guides/math/date-calculation",
-    icon: Calendar,
-    readTime: "12 min read",
-    category: "Date & Time",
+    title: "Date & Time",
+    description: "Learn date calculations, time zones, and scheduling.",
+    href: "/guides/time",
   },
 ];
 
@@ -117,8 +116,33 @@ export default function MathGuidesPage() {
           </div>
         </section>
 
+        {/* Related Categories */}
+        <section className="border-t border-slate-200 bg-slate-50 px-4 py-12 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl">
+            <h3 className="mb-6 text-center text-lg font-semibold text-slate-900">
+              Related Categories
+            </h3>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {relatedCategories.map((category) => (
+                <Link
+                  key={category.title}
+                  href={category.href}
+                  className="rounded-lg border border-slate-200 bg-white p-4 transition-all hover:shadow-md"
+                >
+                  <h4 className="mb-1 font-semibold text-slate-900">
+                    {category.title}
+                  </h4>
+                  <p className="text-sm text-slate-600">
+                    {category.description}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Related Tools CTA */}
-        <section className="border-t border-slate-200 bg-slate-50 px-4 py-16 sm:px-6 lg:px-8">
+        <section className="border-t border-slate-200 bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-4 text-2xl font-bold text-slate-900">
               Practice What You Learned

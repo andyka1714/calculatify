@@ -509,7 +509,7 @@ export default function PercentageCalculatorPage() {
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               <Link
-                href="/tools/math/date-calculator"
+                href="/tools/time/date-calculator"
                 className="rounded-lg border border-slate-200 bg-white p-5 transition-all hover:-translate-y-1 hover:shadow-md"
               >
                 <h3 className="mb-2 font-semibold text-slate-900">

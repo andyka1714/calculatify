@@ -100,7 +100,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/guides/math/date-calculation"
+                    href="/guides/time/date-calculation"
                     className="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
                   >
                     Date Calculation
@@ -133,7 +133,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/tools/math/date-calculator"
+                    href="/tools/time/date-calculator"
                     className="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
                   >
                     Date Calc

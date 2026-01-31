@@ -517,7 +517,7 @@ export default function DateCalculationGuidePage() {
                   className="bg-white text-indigo-600 hover:bg-indigo-50"
                   asChild
                 >
-                  <Link href="/tools/math/date-calculator">
+                  <Link href="/tools/time/date-calculator">
                     <Calendar className="mr-2 h-5 w-5" />
                     Try Date Calculator
                   </Link>
