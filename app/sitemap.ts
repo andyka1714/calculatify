@@ -73,7 +73,7 @@ function getPageConfig(
 
   // 指南頁面
   if (route.startsWith("/guides/")) {
-    return { priority: 0.9, changeFrequency: "monthly" };
+    return { priority: 0.9, changeFrequency: "weekly" };
   }
 
   // 部落格文章
