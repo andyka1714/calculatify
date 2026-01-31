@@ -486,7 +486,7 @@ export default function PercentageGuidePage() {
                   className="bg-white text-indigo-600 hover:bg-indigo-50"
                   asChild
                 >
-                  <Link href="/tools/percentage-calculator">
+                  <Link href="/tools/math/percentage-calculator">
                     <Calculator className="mr-2 h-5 w-5" />
                     Try Percentage Calculator
                   </Link>

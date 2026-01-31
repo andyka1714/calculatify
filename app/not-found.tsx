@@ -51,7 +51,7 @@ export default function NotFound() {
             </h3>
             <div className="grid gap-4 sm:grid-cols-2">
               <Link
-                href="/guides/percentage-calculation"
+                href="/guides/math/percentage-calculation"
                 className="rounded-lg border border-slate-200 p-4 text-left transition-colors hover:border-indigo-300 hover:bg-indigo-50"
               >
                 <div className="mb-2 text-2xl">📊</div>
@@ -64,7 +64,7 @@ export default function NotFound() {
               </Link>
 
               <Link
-                href="/tools/percentage-calculator"
+                href="/tools/math/percentage-calculator"
                 className="rounded-lg border border-slate-200 p-4 text-left transition-colors hover:border-indigo-300 hover:bg-indigo-50"
               >
                 <div className="mb-2 text-2xl">🔢</div>
@@ -77,7 +77,7 @@ export default function NotFound() {
               </Link>
 
               <Link
-                href="/tools/date-calculator"
+                href="/tools/math/date-calculator"
                 className="rounded-lg border border-slate-200 p-4 text-left transition-colors hover:border-indigo-300 hover:bg-indigo-50"
               >
                 <div className="mb-2 text-2xl">📅</div>

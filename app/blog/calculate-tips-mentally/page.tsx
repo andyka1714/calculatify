@@ -338,7 +338,7 @@ export default function CalculateTipsMentallyPage() {
                     className="bg-white text-indigo-600 hover:bg-indigo-50"
                     asChild
                   >
-                    <Link href="/tools/percentage-calculator">
+                    <Link href="/tools/math/percentage-calculator">
                       Open Calculator
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>

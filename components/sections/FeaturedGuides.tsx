@@ -13,7 +13,7 @@ export function FeaturedGuides() {
       title: "The Complete Percentage Guide",
       description:
         "Master percentage calculations with our comprehensive guide. Learn the three essential formulas, real-world applications, and common mistakes to avoid.",
-      href: "/guides/percentage-calculation",
+      href: "/guides/math/percentage-calculation",
       category: "Math",
       readTime: "10 min read",
     },
@@ -23,8 +23,8 @@ export function FeaturedGuides() {
       title: "Understanding Date Math",
       description:
         "From Unix timestamps to leap years, discover the science behind date calculations. Perfect for project planning and scheduling.",
-      href: "/guides/date-calculation",
-      category: "Time",
+      href: "/guides/math/date-calculation",
+      category: "Math",
       readTime: "12 min read",
     },
     {
@@ -33,8 +33,8 @@ export function FeaturedGuides() {
       title: "Age Calculation Explained",
       description:
         "Different cultures calculate age differently. Learn about Korean age, exact second calculations, and zodiac sign determinations.",
-      href: "/guides/age-calculation",
-      category: "Time",
+      href: "/guides/math/age-calculation",
+      category: "Math",
       readTime: "6 min read",
     },
   ];

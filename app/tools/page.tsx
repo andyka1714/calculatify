@@ -6,36 +6,53 @@ import {
   Wrench,
   ArrowRight,
   Calculator,
-  Calendar,
-  CheckCircle,
+  TrendingUp,
+  Heart,
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "All Calculators | Calculatify",
+  title: "All Calculators | Calculatify Tools",
   description:
-    "Free online calculators for everyday math. Percentage calculator, date calculator, and more. Accurate, easy to use, with step-by-step explanations.",
+    "Free online calculators for math, finance, and health. Accurate, easy to use, with detailed explanations and step-by-step solutions.",
+  keywords: ["online calculators", "math tools", "free calculator", "calculation tools"],
 };
 
-const tools = [
+const categories = [
   {
-    title: "Percentage Calculator",
+    title: "Math",
     description:
-      "Calculate percentages instantly for discounts, taxes, grades, and more. Three calculation modes with step-by-step explanations.",
-    href: "/tools/percentage-calculator",
+      "Free calculators for everyday math problems. Percentages, dates, and more.",
+    href: "/tools/math",
     icon: Calculator,
-    features: ["Discount calculations", "Tax computations", "Grade conversions"],
+    count: 2,
+    color: "bg-indigo-100",
+    iconColor: "text-indigo-600",
   },
   {
-    title: "Date Calculator",
+    title: "Finance",
     description:
-      "Calculate the difference between two dates. Find days, weeks, months, and working days between any dates with leap year support.",
-    href: "/tools/date-calculator",
-    icon: Calendar,
-    features: ["Day counting", "Working days only", "Leap year support"],
+      "Financial calculators for taxes, investments, loans, and budgeting.",
+    href: "/tools/finance",
+    icon: TrendingUp,
+    count: 0,
+    color: "bg-emerald-100",
+    iconColor: "text-emerald-600",
+    comingSoon: true,
+  },
+  {
+    title: "Health",
+    description:
+      "Health and fitness calculators for BMI, calories, and body metrics.",
+    href: "/tools/health",
+    icon: Heart,
+    count: 0,
+    color: "bg-rose-100",
+    iconColor: "text-rose-600",
+    comingSoon: true,
   },
 ];
 
-export default function ToolsPage() {
+export default function AllToolsPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -49,46 +66,56 @@ export default function ToolsPage() {
               Calculator Tools
             </div>
             <h1 className="mb-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-              Free Online Calculators
+              All Calculators
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-slate-600">
-              Accurate calculators for everyday math problems. Simple to use,
-              with detailed explanations and step-by-step solutions.
+              Free online calculators organized by category. Accurate tools for
+              everyday calculations.
             </p>
           </div>
         </section>
 
-        {/* Tools Grid */}
+        {/* Categories Grid */}
         <section className="px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
-            <div className="grid gap-6 md:grid-cols-2">
-              {tools.map((tool) => (
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {categories.map((category) => (
                 <Link
-                  key={tool.href}
-                  href={tool.href}
-                  className="group flex flex-col rounded-xl border border-slate-200 bg-white p-6 transition-all hover:-translate-y-1 hover:shadow-lg"
+                  key={category.title}
+                  href={category.href}
+                  className={`group flex flex-col rounded-xl border border-slate-200 bg-white p-6 transition-all hover:-translate-y-1 hover:shadow-lg ${
+                    category.comingSoon ? "opacity-75" : ""
+                  }`}
                 >
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-100">
-                    <tool.icon className="h-6 w-6 text-indigo-600" />
+                  <div className="mb-4 flex items-start justify-between">
+                    <div
+                      className={`flex h-14 w-14 items-center justify-center rounded-xl ${category.color}`}
+                    >
+                      <category.icon
+                        className={`h-7 w-7 ${category.iconColor}`}
+                      />
+                    </div>
+                    {category.comingSoon ? (
+                      <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-500">
+                        Coming Soon
+                      </span>
+                    ) : (
+                      <span className="rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-600">
+                        {category.count} tools
+                      </span>
+                    )}
                   </div>
 
-                  <h2 className="mb-2 text-xl font-bold text-slate-900 group-hover:text-indigo-600">
-                    {tool.title}
+                  <h2 className="mb-2 text-2xl font-bold text-slate-900 group-hover:text-indigo-600">
+                    {category.title}
                   </h2>
 
-                  <p className="mb-4 flex-1 text-slate-600">{tool.description}</p>
-
-                  <div className="mb-4 space-y-2">
-                    {tool.features.map((feature, index) => (
-                      <div key={index} className="flex items-center gap-2 text-sm text-slate-500">
-                        <CheckCircle className="h-4 w-4 text-emerald-500" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
+                  <p className="mb-6 flex-1 text-slate-600">
+                    {category.description}
+                  </p>
 
                   <div className="flex items-center gap-1 text-sm font-medium text-indigo-600 group-hover:gap-2 transition-all">
-                    Try Calculator
+                    {category.comingSoon ? "Coming Soon" : "Explore Tools"}
                     <ArrowRight className="h-4 w-4" />
                   </div>
                 </Link>
@@ -97,15 +124,14 @@ export default function ToolsPage() {
           </div>
         </section>
 
-        {/* Educational Section */}
+        {/* CTA Section */}
         <section className="border-t border-slate-200 bg-slate-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-4 text-2xl font-bold text-slate-900">
               Learn the Math Behind the Calculations
             </h2>
             <p className="mb-6 text-slate-600">
-              Understanding how these calculations work helps you use them more
-              effectively. Check out our comprehensive guides.
+              Understanding how calculations work helps you use them more effectively.
             </p>
             <Link
               href="/guides"

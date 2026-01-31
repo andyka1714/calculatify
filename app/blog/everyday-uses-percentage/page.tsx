@@ -241,7 +241,7 @@ export default function EverydayUsesPercentagePage() {
                     className="bg-white text-indigo-600 hover:bg-indigo-50"
                     asChild
                   >
-                    <Link href="/tools/percentage-calculator">
+                    <Link href="/tools/math/percentage-calculator">
                       Open Calculator
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -274,7 +274,7 @@ export default function EverydayUsesPercentagePage() {
               </h2>
               <div className="grid gap-4 sm:grid-cols-2">
                 <Link
-                  href="/guides/percentage-calculation"
+                  href="/guides/math/percentage-calculation"
                   className="rounded-lg border border-slate-200 bg-white p-4 transition-all hover:shadow-md"
                 >
                   <h3 className="mb-2 font-semibold text-slate-900">

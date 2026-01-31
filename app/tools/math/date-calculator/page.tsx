@@ -423,7 +423,7 @@ export default function DateCalculatorPage() {
                   className="border-indigo-300 bg-white text-indigo-700 hover:bg-indigo-50"
                   asChild
                 >
-                  <Link href="/guides/date-calculation">
+                  <Link href="/guides/math/date-calculation">
                     Read Full Guide
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -512,7 +512,7 @@ export default function DateCalculatorPage() {
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               <Link
-                href="/tools/age-calculator"
+                href="/tools/math/age-calculator"
                 className="rounded-lg border border-slate-200 bg-white p-5 transition-all hover:-translate-y-1 hover:shadow-md"
               >
                 <h3 className="mb-2 font-semibold text-slate-900">
@@ -524,7 +524,7 @@ export default function DateCalculatorPage() {
               </Link>
 
               <Link
-                href="/tools/percentage-calculator"
+                href="/tools/math/percentage-calculator"
                 className="rounded-lg border border-slate-200 bg-white p-5 transition-all hover:-translate-y-1 hover:shadow-md"
               >
                 <h3 className="mb-2 font-semibold text-slate-900">

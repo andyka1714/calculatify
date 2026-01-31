@@ -21,21 +21,21 @@ import { Button } from "@/components/ui/button";
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Navigation Items - Content-First Architecture
+  // Navigation Items - Content-First Architecture with Categories
   const learnItems = [
     {
       label: "Percentage Calculation Guide",
-      href: "/guides/percentage-calculation",
+      href: "/guides/math/percentage-calculation",
       status: "live",
     },
     {
       label: "Date Calculation Guide",
-      href: "/guides/date-calculation",
+      href: "/guides/math/date-calculation",
       status: "live",
     },
     {
       label: "Age Calculation Guide",
-      href: "/guides/age-calculation",
+      href: "/guides/math/age-calculation",
       status: "coming-soon",
     },
   ];
@@ -43,17 +43,17 @@ export function Header() {
   const toolItems = [
     {
       label: "Percentage Calculator",
-      href: "/tools/percentage-calculator",
+      href: "/tools/math/percentage-calculator",
       status: "live",
     },
     {
       label: "Date Calculator",
-      href: "/tools/date-calculator",
+      href: "/tools/math/date-calculator",
       status: "live",
     },
     {
       label: "Age Calculator",
-      href: "/tools/age-calculator",
+      href: "/tools/math/age-calculator",
       status: "coming-soon",
     },
   ];
@@ -255,6 +255,31 @@ export function Header() {
                 Learning Guides
               </div>
               {visibleLearnItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="block rounded-md px-4 py-3 text-base text-slate-600 transition-colors duration-200 hover:bg-slate-100 hover:text-indigo-600 dark:text-slate-300 dark:hover:bg-slate-800"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <Link
+                href="/guides"
+                className="block rounded-md px-4 py-3 text-base font-medium text-indigo-600 transition-colors duration-200 hover:bg-slate-100 dark:text-indigo-400 dark:hover:bg-slate-800"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                View All Guides →
+              </Link>
+            </div>
+
+            {/* Tools - Mobile */}
+            <div className="mb-4">
+              <div className="mb-2 flex items-center gap-2 px-4 py-2 text-sm font-semibold uppercase tracking-wider text-slate-400">
+                <Wrench className="h-4 w-4" />
+                Calculators
+              </div>
+              {visibleToolItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}

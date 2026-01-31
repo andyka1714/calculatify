@@ -92,7 +92,7 @@ export function Footer() {
               <ul className="space-y-3 text-sm">
                 <li>
                   <Link
-                    href="/guides/percentage-calculation"
+                    href="/guides/math/percentage-calculation"
                     className="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
                   >
                     Percentage Guide
@@ -100,7 +100,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/guides/date-calculation"
+                    href="/guides/math/date-calculation"
                     className="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
                   >
                     Date Calculation
@@ -125,7 +125,7 @@ export function Footer() {
               <ul className="space-y-3 text-sm">
                 <li>
                   <Link
-                    href="/tools/percentage-calculator"
+                    href="/tools/math/percentage-calculator"
                     className="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
                   >
                     Percentage Calc
@@ -133,7 +133,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/tools/date-calculator"
+                    href="/tools/math/date-calculator"
                     className="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
                   >
                     Date Calc
