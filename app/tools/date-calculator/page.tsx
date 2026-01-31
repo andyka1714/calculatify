@@ -48,9 +48,9 @@ export default function DateCalculatorPage() {
       end.setTime(temp.getTime());
     }
 
-    // 计算总天数
+    // 计算总天数（包含首尾两天）
     const diffTime = Math.abs(end.getTime() - start.getTime());
-    const totalDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const totalDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;
 
     // 计算工作日和周末
     let weekdays = 0;
@@ -458,9 +458,10 @@ export default function DateCalculatorPage() {
                   Does this calculator include the start or end date?
                 </h3>
                 <p className="text-slate-600">
-                  Our calculator includes both the start and end dates in the
+                  Yes! Our calculator includes both the start and end dates in the
                   count. For example, from January 1 to January 3 is counted as
-                  3 days (1st, 2nd, and 3rd).
+                  3 days (January 1st, 2nd, and 3rd). Similarly, January 1 to January 31
+                  is counted as 31 days.
                 </p>
               </div>
 
